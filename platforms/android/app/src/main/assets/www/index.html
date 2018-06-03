@@ -2,7 +2,7 @@
 <html>
   <head>
    
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;font-src 'self' 'unsafe-inline' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;font-src 'self' 'unsafe-inline' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'"-->
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="libs/roboto.css">
     <link rel="stylesheet" href="libs/vuematerial.css">
     <link rel="stylesheet" href="libs/vuethemedefault.css">
-      <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+      
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.1.0.js"></script>
       
     
       
@@ -21,12 +23,12 @@
       
   </head>
 
-  <body onload="init()" style="background-color: #f2f2f2;">
+  <body onload="init()" style="background-color: #fafafa;">
     <div  class="app-viewport" id="app">
         
         
         
-        <md-toolbar class="md-primary"> <!-- inicio toolbar de la app-->
+        <md-toolbar class="md-primary" style="box-shadow: none"> <!-- inicio toolbar de la app-->
             <md-button class="md-icon-button" @click="showNavigation = true">
                 <md-icon>menu</md-icon>
             </md-button>
@@ -39,7 +41,7 @@
         
         <md-drawer :md-active.sync="showNavigation" ref="sidebar"> <!-- inicio panel lateral-->
               <md-toolbar class="md-primary" md-elevation="0">
-                <span class="md-title">Vanessa Palmer</span>
+                <span class="md-title">Arnau Felip</span>
               </md-toolbar>
 
               <md-list>
@@ -84,15 +86,60 @@
 		<script src="js/vue-router.js"></script>
 		<script src="libs/vuematerial.js"></script>
         <script src="js/components/cerrarsesion.js"></script>
-      <script src="js/components/buscador.js"></script>
+        <script src="js/components/buscador.js"></script>
+        <script src="js/components/detalle_proyecto.js"></script>
       	<script src="js/components/perfil.js"></script>
+        <script src="js/components/perfil_Dracma.js"></script>
+        <script src="js/components/perfil_spring.js"></script>
+        <script src="js/components/perfil_Anne.js"></script>
+        <script src="js/components/perfil_Evolve.js"></script>
+        <script src="js/components/perfil_Bernat.js"></script>
+        <script src="js/components/perfil_Mark.js"></script>
+        <script src="js/components/perfil_Mkmedia.js"></script>
+        <script src="js/components/perfil_Martha.js"></script>
+        <script src="js/components/perfil_Woman.js"></script> 
+      
+      <script src="js/components/detalle_cafe.js"></script> 
+      <script src="js/components/detalle_dungeon.js"></script> 
+      <script src="js/components/detalle_lonely.js"></script> 
+      <script src="js/components/detalle_show.js"></script>
+      <script src="js/components/detalle_thanos.js"></script>
+      
+      <script src="js/components/detalle_Animated.js"></script>
+      <script src="js/components/detalle_Cook.js"></script>
+      <script src="js/components/detalle_Creation.js"></script>
+      <script src="js/components/detalle_Ice.js"></script>
+      <script src="js/components/detalle_Starbucks.js"></script>
+      
+      <script src="js/components/detalle_proyecto_Du.js"></script>
+      <script src="js/components/detalle_proyecto_pink.js"></script>
+      <script src="js/components/detalle_proyecto_Renegades.js"></script>
+      
+      
+      	  <script src="js/components/seguidor_anne.js"></script>
+	  <script src="js/components/seguidor_arnau.js"></script>
+	  <script src="js/components/seguidor_bernat.js"></script>
+	  <script src="js/components/seguidor_mark.js"></script>
+	  <script src="js/components/seguidor_martha.js"></script>
+	  
+	  
+	  <script src="js/components/seguido_anne.js"></script>
+	  <script src="js/components/seguido_arnau.js"></script>
+	  <script src="js/components/seguido_bernat.js"></script>
+	  <script src="js/components/seguido_mark.js"></script>
+	  <script src="js/components/seguido_martha.js"></script>
+	
+	  
+
+      
+      
+      
+      
+        <script src="js/components/seguidor.js"></script>
+        <script src="js/components/seguido.js"></script>
 		<script src="js/components/simple_list.js"></script>
 		<script src="js/components/settings.js"></script>
 		<script src="js/main.js"></script>
   </body>
 </html>
-
-
-
-
 

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sketchfab Viewer API example</title>
+
+    <!-- Insert this script -->
+    <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.1.0.js"></script>
+</head>
+
+<body>
+    <p>Sketchfab Viewer API</p>
+    <!-- Insert an empty iframe -->
+    <iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" width="400px" height="300px"></iframe>
+
+    <!-- Initialize the viewer -->
+    <script type="text/javascript">
+      // The iframe
+      var iframe = document.getElementById( 'api-frame' );
+      // API version
+      var version = '1.0.0';
+      // Model to load
+      var urlid = 'ba8389b72ffc4d52a5ce7b95aa73b79d';
+      // Sketchfab API client object
+      var client = new Sketchfab( version, iframe );
+
+    // Alternatively, you can request last version.
+    // var client = new Sketchfab( iframe );
+
+    client.init( urlid, {
+        success: function onSuccess( api ){
+            api.start();
+            api.addEventListener( 'viewerready', function() {
+
+                // API is ready to use
+                // Insert your code here
+                console.log( 'Viewer is ready' );
+
+            } );
+        },
+        error: function onError() {
+            console.log( 'Viewer error' );
+        }
+    } );
+    </script>
+</body>
+</html>
+
